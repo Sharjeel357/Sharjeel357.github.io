@@ -18,6 +18,37 @@
 {"@context":"https://schema.org","@type":"Person","name":"Sharjeel Hashmi","jobTitle":"AI/ML Engineer","url":"https://sharjeel357.github.io/","email":"mailto:sharjeelhashmi91131@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"sameAs":["https://github.com/Sharjeel357","https://www.linkedin.com/in/sharjeel-hashmi-9113120abc"]}
 </script>
 <style>
+
+/* === Motion background + glossy glass surfaces === */
+:root{--paper:#F2F1EC;--ink:#101114;--blue:#2B3FE8}
+body{position:relative;isolation:isolate;background:#f2f1ec}
+#site-bg{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;pointer-events:none;opacity:.78}
+#site-bg-shade{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.56),rgba(241,242,255,.25) 48%,rgba(255,255,255,.5))}
+.bar{background:rgba(248,248,246,.62);backdrop-filter:blur(22px) saturate(155%);-webkit-backdrop-filter:blur(22px) saturate(155%);border-bottom:1px solid rgba(255,255,255,.7)}
+.hero{position:relative}
+.hero .say,.now li,.hero h1{ text-shadow:0 1px 16px rgba(255,255,255,.52)}
+.me{box-shadow:10px 10px 0 rgba(43,63,232,.82),0 18px 50px rgba(25,31,60,.16)}
+.panel{position:relative;background:transparent!important;overflow:hidden}
+.panel:before{content:"";position:absolute;inset:18px 0;background:linear-gradient(135deg,rgba(255,255,255,.58),rgba(255,255,255,.22));border-top:1px solid rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.5);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);pointer-events:none}
+.panel .in{position:relative;z-index:1;padding-top:32px;padding-bottom:32px}
+.panel .in>div:first-child{padding:30px;border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,.68),rgba(255,255,255,.34));border:1px solid rgba(255,255,255,.8);box-shadow:0 18px 55px rgba(20,25,50,.12),inset 0 1px 0 rgba(255,255,255,.95);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
+.panel .in>div:first-child h2,.panel .in>div:first-child p{color:#101114}
+.panel .in>div:first-child .kind{color:#2B3FE8;opacity:1}
+.viz{border:1px solid rgba(255,255,255,.85);background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.62));box-shadow:0 22px 60px rgba(15,20,45,.18),inset 0 1px 0 rgba(255,255,255,.98);backdrop-filter:blur(24px) saturate(165%);-webkit-backdrop-filter:blur(24px) saturate(165%);transition:transform .25s,box-shadow .25s}
+.viz:hover{transform:translateY(-5px);box-shadow:0 28px 70px rgba(15,20,45,.22),inset 0 1px 0 rgba(255,255,255,.98)}
+.exp,.contact{position:relative;z-index:1}
+.exp{background:rgba(16,17,20,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.sk{position:relative;background:rgba(255,255,255,.36);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.contact{background:rgba(43,63,232,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+@media(max-width:700px){
+ #site-bg{opacity:.45;object-position:center}
+ #site-bg-shade{background:rgba(255,255,255,.38)}
+ .panel:before{inset:10px 0}
+ .panel .in>div:first-child{padding:22px}
+ .viz{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){#site-bg{display:none}}
+
 :root{--paper:#F2F1EC;--ink:#101114;--blue:#2B3FE8}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -147,6 +178,8 @@ header.top nav a:hover,header.top nav a.on{border-bottom-color:var(--ink)}
 </style>
 </head>
 <body>
+<video id="site-bg" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"><source src="background.mp4" type="video/mp4"></video><div id="site-bg-shade" aria-hidden="true"></div>
+
 <div id="prog"></div>
 
 <div class="bar"><div class="w">
